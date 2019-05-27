@@ -13,8 +13,16 @@ const capabilities = [
     description: 'place \':text\' into the buffer'
   }, {
     method:'GET',
+    path: '/:bufname/yank/:text',
+    description: 'place \':text\' into buffer :bufname'
+  }, {
+    method:'GET',
     path: '/put',
     description: 'retrieve the contents of the buffer'
+  }, {
+    method:'GET',
+    path: '/:bufname/put',
+    description: 'retrieve the contents of buffer :bufname'
   }
 ]
 
