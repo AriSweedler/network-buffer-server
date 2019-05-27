@@ -1,0 +1,15 @@
+{
+  "name": "network-buffer-server",
+  "version": "1.0.0",
+  "description": "A simple implementation of a server that acts as a network buffer (so I can copy/paste across multiple machines easily!)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ari Sweedler",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
