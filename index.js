@@ -1,11 +1,16 @@
 const express = require('express')
 const app = express()
 const port = Number(process.env.PORT || 8000);
+const capabilities = require('./capabilities')
 
 let network_buffer = null;
+let header = () => `Hello World! Your network buffer contains: '${network_buffer}' <hr>`
 
-app.get('/', (req, res) => {
-  res.send(`Hello World! Your network buffer contains: '${network_buffer}'`);
+//Idk why '/(help)?' causes an error!? Oh well :P doesn't matter
+app.get('/h?(elp)?', (req, res) => {
+  res.send(`${header()}
+  ${capabilities.bullet_list()}
+  `);
 });
 
 app.get('/yank/:text', function (req, res) {
